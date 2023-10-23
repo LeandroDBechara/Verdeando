@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "verdeando_colab",
+    "slug": "verdeando_colab",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "verdeando_colab"
+}
