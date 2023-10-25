@@ -22,6 +22,7 @@ public class WorkerController : MonoBehaviour
     public float workerBaseCost;
     public float workerMultCost;
     public float workerPower;
+    public Image workerImage;
 
     public Text workerLevelDisp;
     public Text workerNameDisp;
@@ -52,15 +53,15 @@ public class WorkerController : MonoBehaviour
     {
         for(int i = 0;i < listaWorkersSO.Count;i++) 
         {
-            GC.bananas += listaWorkersSO[i].workerPower * workerLevel[i]; 
+            GC.dinero += listaWorkersSO[i].workerPower * workerLevel[i]; 
         }
     }
 
     public void ContratarWorkers(int ID)
     {
-        if (CalcularCoste(ID) <= GC.bananas)
+        if (CalcularCoste(ID) <= GC.dinero)
         {
-            GC.bananas -= CalcularCoste(ID);
+            GC.dinero -= CalcularCoste(ID);
             workerLevel[ID] += 1;
             GC.problemDisp.text = "otro" + listaWorkersSO[ID].workerName + "laburante";
 
@@ -82,7 +83,7 @@ public class WorkerController : MonoBehaviour
             listaWorkersUI[i].workerLevelDisp.text = workerLevel[i].ToString();
             listaWorkersUI[i].workerNameDisp.text = listaWorkersSO[i].workerName;
             listaWorkersUI[i].workerBaseCostDisp.text = "Coste: " + CalcularCoste(i).ToString("0.00") + " bananas";
-            GC.bps += listaWorkersSO[i].workerPower * workerLevel[i];
+            GC.dps += listaWorkersSO[i].workerPower * workerLevel[i];
         }
 
     }

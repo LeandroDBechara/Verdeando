@@ -56,9 +56,9 @@ public class BuildingController : MonoBehaviour
 
     public void ConstruirBuilding(int ID)
     {
-        if (CalcularCoste(ID) <= GC.gold)
+        if (CalcularCoste(ID) <= GC.ecoPoint)
         {
-            GC.gold -= CalcularCoste(ID);
+            GC.ecoPoint -= CalcularCoste(ID);
             buildingLevel[ID] += 1;
             GC.limiteBananas += listaBuildingSO[ID].buildingSpace;
             GC.problemDisp.text = "otro" + listaBuildingSO[ID].buildingName + "laburante";
@@ -81,7 +81,7 @@ public class BuildingController : MonoBehaviour
             listaBuildingUI[i].buildingLevelDisp.text = buildingLevel[i].ToString();
             listaBuildingUI[i].buildingNameDisp.text = listaBuildingSO[i].buildingName;
             listaBuildingUI[i].buildingBaseCostDisp.text = "Coste: " + CalcularCoste(i).ToString("0.00") + " bananas";
-            GC.bps += listaBuildingSO[i].buildingSpace * buildingLevel[i];
+            GC.dps += listaBuildingSO[i].buildingSpace * buildingLevel[i];
         }
 
     }
