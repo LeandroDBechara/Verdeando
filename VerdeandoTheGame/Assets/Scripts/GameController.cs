@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -12,55 +13,40 @@ public class GameController : MonoBehaviour
 
 
     //Variables numericas
-    public float bananas;
+    public float dinero;
     public float limiteBananas;
     public string leyenda;
-    public float bps;
-    public float gold;
+    public float dps;
+    public float ecoPoint;
 
     //componentesUI
-    public Text bananasDisp;
+    public Text dineroDisp;
     public Text problemDisp;
-    public Text BpsDisp;
-    public Text goldDisp;
+    public Text dpsDisp;
+    public Text ecoPointDisp;
 
     // Start is called before the first frame update
     void Start()
     {
-        bananas = 0;
-        limiteBananas = 20;
+        dinero = 0;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        bananasDisp.text = leyenda;
-        leyenda = "Bananas: " + bananas.ToString("0.0");
-        if (bananas < limiteBananas)
+        dineroDisp.text = leyenda;
+        leyenda = "$ " + dinero.ToString("0");
+        /*if (dinero < limiteBananas)
         {
-            bananasDisp.color = Color.white;
+            dineroDisp.color = Color.white;
         }
         else
         {
-            bananasDisp.color = Color.red;
-        }
-        BpsDisp.text = bps +"BPS";
-        goldDisp.text = "Oro"+ gold.ToString();
-    }
-
-    public void GenerarBananas()
-    {
-        
-        if(bananas < limiteBananas) 
-        {
-            bananas += 1;
-        }
-        else
-        {
-            problemDisp.text = "no caben mas bananas";
-            StartCoroutine(VanishingProblemText());
-        }
+            dineroDisp.color = Color.red;
+        }*/
+        dpsDisp.text = dps +"DPS";
+        ecoPointDisp.text = ecoPoint.ToString() + " EP";
     }
 
     public IEnumerator VanishingProblemText()
@@ -73,5 +59,10 @@ public class GameController : MonoBehaviour
             CG.alpha -= 0.05f;
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    public void CambiarEscena(int ID)
+    {
+        SceneManager.LoadScene(ID);
     }
 }

@@ -29,10 +29,10 @@ public class TradeController : MonoBehaviour
 
     public void VenderBananas()
     {
-        if(rateTrading < GC.bananas)
+        if(rateTrading < GC.dinero)
         {
-            GC.bananas -= rateTrading;
-            GC.gold += 1;
+            GC.dinero -= rateTrading;
+            GC.ecoPoint += 1;
         }
         else
         {
