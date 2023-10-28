@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "verdeando-colab",
-    "slug": "verdeando-colab",
+    "name": "verdeando_colab",
+    "slug": "verdeando_colab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
