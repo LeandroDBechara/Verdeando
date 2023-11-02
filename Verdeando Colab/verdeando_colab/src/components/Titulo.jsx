@@ -17,10 +17,10 @@ export default function Titulo() {
 }
 const styles = StyleSheet.create({
     container: {
-        flex:1,
-        padding: 40,
-        alignContent: 'center',
-        
+        backgroundColor:'#FFFFFF',
+        marginTop: 80,
+        padding: 20,
+        alignContent: 'center',   
     },
     titulo: {
         fontFamily:'PressStart',
