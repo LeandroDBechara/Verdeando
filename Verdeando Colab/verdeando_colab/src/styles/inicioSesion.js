@@ -1,12 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    container:{ 
-        flex:1,
-    },
     txtPrincipal:{
         fontFamily:'Roboto',
-        marginTop:30,
+        marginTop:15,
         textAlign:'center',
         fontSize: 32,
         letterSpacing: 1.28,

@@ -1,4 +1,5 @@
-import { View, Text, TouchableOpacity, TextInput, ScrollView, useState} from 'react-native'
+import { View, Text, TouchableOpacity, TextInput, ScrollView, StatusBar} from 'react-native'
+//import { StatusBar } from 'expo-status-bar';
 import React from 'react'
 import styles from '../styles/inicioSesion'
 import Titulo from '../components/Titulo'
@@ -8,21 +9,23 @@ import Separador from '../components/Separador'
 import imputs from '../styles/imputs'
 import botones from '../styles/botones'
 import Footer from '../components/Footer'
-import { Input } from 'react-native-elements'
 
-export default function InicioSesion() {
+export default function InicioSesion({navigation}) {
     const [fontsLoaded]= useFonts({
         'Roboto': require("../../assets/fonts/Roboto.ttf"),
     });
     if(!fontsLoaded) return null;
 
     return (
-        <ScrollView style={styles.InicioSesion} keyboardShouldPersistTaps="handled">
+        <ScrollView style={{flex: 1}} keyboardShouldPersistTaps="handled">
+            <StatusBar/> 
             <Titulo />
             <Text style={styles.txtPrincipal}>Iniciar Sesión</Text>
             <View style={styles.renglon}>
                 <Text style={styles.txtSecundario}>¿Aún no tienes cuenta? </Text>
-                <TouchableOpacity onPress={()=>{}}> 
+                <TouchableOpacity onPress={()=>{
+                    navigation.navigate("Registrarse")
+                }}> 
                 <Text style={styles.enlace}>¡Regístrate aquí!</Text>
                 </TouchableOpacity> 
             </View>
@@ -36,7 +39,7 @@ export default function InicioSesion() {
                 </TouchableOpacity>         
             </View>
             <View style={botones.container}> 
-                <TouchableOpacity style={botones.boton} onPress={()=>{}}> 
+                <TouchableOpacity style={botones.boton} onPress={()=>{navigation.navigate("Home")}}> 
                     <Text style={botones.texto}>Ingresar</Text>
                 </TouchableOpacity>
             </View>

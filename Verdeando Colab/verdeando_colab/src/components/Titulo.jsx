@@ -17,8 +17,7 @@ export default function Titulo() {
 }
 const styles = StyleSheet.create({
     container: {
-        backgroundColor:'#FFFFFF',
-        marginTop: 80,
+        marginTop: 60,
         padding: 20,
         alignContent: 'center',   
     },

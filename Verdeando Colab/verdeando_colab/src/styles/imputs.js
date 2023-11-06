@@ -5,7 +5,7 @@ const imputs = StyleSheet.create({
         margin:20
     },
     imput:{
-        marginBottom:30,
+        marginBottom:20,
         width: 360,
         height: 65,
         paddingHorizontal:20,
