@@ -18,11 +18,12 @@ export default function Header() {
 }
 const styles = StyleSheet.create({
     container:{
-     flexDirection:'row',
-     justifyContent:'space-between'
+        padding: 20,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        //  backgroundColor:'#11B11B'
     },
     menu:{
-        margin: 20,
         alignItems:'center',
         justifyContent:'center',
         backgroundColor:'#11B11B',
@@ -31,7 +32,6 @@ const styles = StyleSheet.create({
         borderRadius:8
     },
     notificacion:{
-        margin: 20,
         alignItems:'center',
         justifyContent:'center',
         backgroundColor:'#D9D9D9',

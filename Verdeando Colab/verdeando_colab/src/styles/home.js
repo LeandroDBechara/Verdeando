@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
         fontWeight:'900'
     },
     subcont2:{
-        margin: 50,
+        marginVertical: 20,
+        marginHorizontal:30
     },
     cantidad_diaria:{
         paddingTop:30,
