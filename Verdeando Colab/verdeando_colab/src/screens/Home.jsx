@@ -1,9 +1,8 @@
 import { Text, ScrollView,  View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useFonts } from 'expo-font'
-import {FontAwesome5} from '@expo/vector-icons'
 import styles from '../styles/home';
-import botones from '../styles/botones';
+import Header from '../components/Header';
 
 export default function Home(navigation) {
   const [fontsLoaded]= useFonts({
@@ -12,6 +11,7 @@ export default function Home(navigation) {
   if(!fontsLoaded) return null;
   return (
     <ScrollView style={styles.container} keyboardShouldPersistTaps="handled" >
+      <Header/>
       <View style={styles.subcont2}>
         <Text style={styles.titulo}>Tus canjes de hoy:</Text>
         <Text style={styles.cantidad_diaria}>99 Kg</Text>
