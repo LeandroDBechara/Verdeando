@@ -1,5 +1,4 @@
 import { View, Text, TouchableOpacity, TextInput, ScrollView, StatusBar} from 'react-native'
-//import { StatusBar } from 'expo-status-bar';
 import React from 'react'
 import styles from '../styles/inicioSesion'
 import Titulo from '../components/Titulo'
