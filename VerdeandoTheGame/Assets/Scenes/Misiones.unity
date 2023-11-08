@@ -1220,6 +1220,7 @@ MonoBehaviour:
   panelMisiones: {fileID: 287543020}
   panelDescripcion: {fileID: 1796752777}
   misionesSO:
+  - {fileID: 11400000, guid: 7a514ede9011f0749b50e51eb1513064, type: 2}
   - {fileID: 11400000, guid: df0f48ddf8c54af43a04d84bf15f8ba3, type: 2}
   - {fileID: 11400000, guid: 4f68aa195c931a54db9e7f278a837844, type: 2}
   - {fileID: 11400000, guid: 67204d7f121c12243a0a3143f59b8c67, type: 2}

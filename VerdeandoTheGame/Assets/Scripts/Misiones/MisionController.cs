@@ -44,6 +44,11 @@ public class MisionController : MonoBehaviour
         dineroDisp.text = "$" + GameController.Instance.gameSO.dinero.ToString("0");
         ecoPointDisp.text = GameController.Instance.gameSO.ecoPoint.ToString("0") + " EP";
 
+        if(GameController.Instance.gameSO.dinero >= 100)
+        {
+            misionesSO[0].echo = true;
+        }
+
         for (int i = 0; i < misionesSO.Count; i++)
         {
             if(misionesSO[i].echo == true)

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class WorkerUI : MonoBehaviour
 {
@@ -13,6 +12,7 @@ public class WorkerUI : MonoBehaviour
     public UnityEngine.UI.Image workerImageDisp;
     public Text PowerDisp;
     public UnityEngine.UI.Slider tiempoSlider;
+    public UnityEngine.UI.Button botonCompra;
     public void Contratar()
     {
         WorkerController.instance.ContratarWorkers(workerID);

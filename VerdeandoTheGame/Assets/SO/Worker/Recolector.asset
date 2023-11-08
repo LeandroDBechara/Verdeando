@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37ff6a0ac652b44088f8364e3cf3265, type: 3}
   m_Name: Recolector
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   workerName: Recolector
   workerBaseCost: 50
   workerMultCost: 1.4

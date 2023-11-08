@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48320abc1c5fe814983ea6fbb47d23be, type: 3}
   m_Name: Game
   m_EditorClassIdentifier: 
-  dinero: 600
+  dinero: 0
   ecoPoint: 0

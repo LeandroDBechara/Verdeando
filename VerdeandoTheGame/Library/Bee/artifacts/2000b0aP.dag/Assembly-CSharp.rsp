@@ -287,7 +287,6 @@
 "Assets/Scripts/Misiones/MisionController.cs"
 "Assets/Scripts/Misiones/MisionSO.cs"
 "Assets/Scripts/Misiones/MisionUI.cs"
-"Assets/Scripts/PlayerData.cs"
 "Assets/Scripts/Principal/WorkerController.cs"
 "Assets/Scripts/Principal/WorkerSO.cs"
 "Assets/Scripts/Principal/WorkerUI.cs"

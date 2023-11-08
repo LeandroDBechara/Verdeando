@@ -801,6 +801,7 @@ MonoBehaviour:
   workerImageDisp: {fileID: 3221242214803786535}
   PowerDisp: {fileID: 2956720531257026876}
   tiempoSlider: {fileID: 2516340982513882350}
+  botonCompra: {fileID: 8211430477838659557}
 --- !u!1 &5624016960683559073
 GameObject:
   m_ObjectHideFlags: 0

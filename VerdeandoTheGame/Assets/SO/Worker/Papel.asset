@@ -16,7 +16,7 @@ MonoBehaviour:
   workerName: Papel
   workerBaseCost: 10
   workerMultCost: 1.2
-  workerPower: 2
+  workerPower: 5
   workerTime: 0.4
   workerImage: {fileID: 21300000, guid: f9ea4ba541b5b4a4d9fee29bcc2afe3b, type: 3}
   Clave: primero

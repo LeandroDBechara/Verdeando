@@ -41,7 +41,29 @@ public class WorkerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dineroDisp.text = "$" + GameController.Instance.gameSO.dinero.ToString("0");
+        for (int i = 0; i < listaWorkersSO.Count; i++)
+        {
+            if (listaWorkersSO[i].level == 0)
+            {
+                listaWorkersUI[i].workerImageDisp.GetComponent<Button>().interactable = false;
+                listaWorkersUI[i].tiempoSlider.interactable = false;
+            }
+            else
+            {
+                listaWorkersUI[i].workerImageDisp.GetComponent<Button>().interactable = true;
+                listaWorkersUI[i].tiempoSlider.interactable = true;
+            }
+
+            if(GameController.Instance.gameSO.dinero >= CalcularCoste(i))
+            {
+                listaWorkersUI[i].botonCompra.interactable = true;
+            }
+            else
+            {
+                listaWorkersUI[i].botonCompra.interactable = false;
+            }
+        }
+            dineroDisp.text = "$" + GameController.Instance.gameSO.dinero.ToString("0");
         ecoPointDisp.text = GameController.Instance.gameSO.ecoPoint.ToString("0") + " EP";
     }
 

@@ -36,6 +36,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
+    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
@@ -52,6 +53,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
@@ -72,10 +74,10 @@ ScriptsOnlyBuild:
     methodName: CambiarEscena
   - assembly: Assembly-CSharp
     fullTypeName: WorkerUI
-    methodName: Laburo
+    methodName: Contratar
   - assembly: Assembly-CSharp
     fullTypeName: WorkerUI
-    methodName: Contratar
+    methodName: Laburo
   - assembly: Assembly-CSharp
     fullTypeName: QuizController
     methodName: CambiarEscena
@@ -145,6 +147,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: TableroControler
     methodName: CambiarEscena
+  - assembly: Assembly-CSharp
+    fullTypeName: EventoUI
+    methodName: Abrir
   sceneClasses:
     Assets/Scenes/Inicio.unity:
     - Class: 1
@@ -176,17 +181,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17400}
     - Class: 114
-      Script: {instanceID: 19218}
+      Script: {instanceID: 19216}
     - Class: 114
-      Script: {instanceID: 19516}
+      Script: {instanceID: 19514}
     - Class: 114
-      Script: {instanceID: 19800}
+      Script: {instanceID: 19798}
     - Class: 114
-      Script: {instanceID: 20236}
+      Script: {instanceID: 20234}
     - Class: 114
-      Script: {instanceID: 20558}
+      Script: {instanceID: 20556}
     - Class: 114
-      Script: {instanceID: 21886}
+      Script: {instanceID: 21884}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -235,17 +240,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18490}
     - Class: 114
-      Script: {instanceID: 19218}
+      Script: {instanceID: 19216}
     - Class: 114
-      Script: {instanceID: 19516}
+      Script: {instanceID: 19514}
     - Class: 114
-      Script: {instanceID: 19800}
+      Script: {instanceID: 19798}
     - Class: 114
-      Script: {instanceID: 20236}
+      Script: {instanceID: 20234}
     - Class: 114
-      Script: {instanceID: 20592}
+      Script: {instanceID: 20590}
     - Class: 114
-      Script: {instanceID: 20636}
+      Script: {instanceID: 20634}
+    - Class: 114
+      Script: {instanceID: 21230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -292,15 +299,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 19002}
     - Class: 114
-      Script: {instanceID: 19516}
+      Script: {instanceID: 19514}
     - Class: 114
-      Script: {instanceID: 19800}
+      Script: {instanceID: 19798}
     - Class: 114
-      Script: {instanceID: 20236}
+      Script: {instanceID: 20234}
     - Class: 114
-      Script: {instanceID: 21394}
+      Script: {instanceID: 21392}
     - Class: 114
-      Script: {instanceID: 21580}
+      Script: {instanceID: 21578}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -343,17 +350,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17198}
     - Class: 114
-      Script: {instanceID: 19452}
+      Script: {instanceID: 19450}
     - Class: 114
-      Script: {instanceID: 19516}
+      Script: {instanceID: 19514}
     - Class: 114
-      Script: {instanceID: 19800}
+      Script: {instanceID: 19798}
     - Class: 114
-      Script: {instanceID: 20236}
+      Script: {instanceID: 20234}
     - Class: 114
-      Script: {instanceID: 20636}
+      Script: {instanceID: 20634}
     - Class: 114
-      Script: {instanceID: 21866}
+      Script: {instanceID: 21864}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -404,13 +411,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18054}
     - Class: 114
-      Script: {instanceID: 19516}
+      Script: {instanceID: 19514}
     - Class: 114
-      Script: {instanceID: 19800}
+      Script: {instanceID: 19798}
     - Class: 114
-      Script: {instanceID: 20236}
+      Script: {instanceID: 20234}
     - Class: 114
-      Script: {instanceID: 20636}
+      Script: {instanceID: 20634}
+    - Class: 114
+      Script: {instanceID: 21230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -459,15 +468,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18274}
     - Class: 114
-      Script: {instanceID: 19342}
+      Script: {instanceID: 19340}
     - Class: 114
-      Script: {instanceID: 19516}
+      Script: {instanceID: 19514}
     - Class: 114
-      Script: {instanceID: 19800}
+      Script: {instanceID: 19798}
     - Class: 114
-      Script: {instanceID: 20236}
+      Script: {instanceID: 20234}
     - Class: 114
-      Script: {instanceID: 20636}
+      Script: {instanceID: 20634}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -919,7 +928,7 @@ ScriptsOnlyBuild:
     className: DictionaryAsset
   - hash:
       serializedVersion: 2
-      Hash: 15ac5fcba05822904904f0711f49717a
+      Hash: b169544dc095337fde6d46ad35f87b42
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WorkerUI
@@ -1369,4 +1378,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Tienda.unity
   - Assets/Scenes/Misiones.unity
   - Assets/Scenes/Tablero.unity
-  playerPath: C:/Leo
+  playerPath: C:/Users/leo_k/OneDrive/Documentos/GitHub/VerdeandoCodigo/Verdeando/Juego
