@@ -4,11 +4,11 @@ import { FontAwesome5, Ionicons } from '@expo/vector-icons'
 
 export default function Header() {
     return (
-        <View style={styles.container}>
+        <View style={styles.container} /*onPress={this.props.navigation.openDrawer}*/>
             <TouchableOpacity style={styles.menu}>
                 <FontAwesome5 name="bars" size={32} color='#FFFFFF'/>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.notificacion}>
+            <TouchableOpacity style={styles.notificacion} >
                 <Ionicons name="notifications" size={32} color="#6C6C6C" />
             </TouchableOpacity>
 
