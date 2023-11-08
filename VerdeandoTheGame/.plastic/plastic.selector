@@ -1,0 +1,4 @@
+repository "VerdeandoTheGame@corteyvieja@cloud"
+  path "/"
+    br "/main"
+    co "/main"

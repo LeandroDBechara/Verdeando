@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb3db71b52de394aa6118ddac7edd65, type: 3}
+  m_Name: Reciclar
+  m_EditorClassIdentifier: 
+  pregunta: "\xBFQue significa el termino resiclaje?"
+  respuesta1: Transformar materiales en productos nuevos
+  respuesta2: Desechar residuos en vertederos
+  respuesta3: Extraer recursos naturales
+  respuesta4: "Quemar desechos para obtener energ\xEDa"
+  respuestaCorrecta: 1

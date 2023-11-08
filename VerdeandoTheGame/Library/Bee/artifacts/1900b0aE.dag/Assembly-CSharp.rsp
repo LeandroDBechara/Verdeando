@@ -346,6 +346,7 @@
 "Assets/Scripts/BuildingSO.cs"
 "Assets/Scripts/BuildingUI.cs"
 "Assets/Scripts/GameController.cs"
+"Assets/Scripts/LevelLoader.cs"
 "Assets/Scripts/TimeController.cs"
 "Assets/Scripts/TradeController.cs"
 "Assets/Scripts/WorkerController.cs"

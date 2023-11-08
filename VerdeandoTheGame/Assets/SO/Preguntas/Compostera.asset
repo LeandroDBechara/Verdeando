@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb3db71b52de394aa6118ddac7edd65, type: 3}
+  m_Name: Compostera
+  m_EditorClassIdentifier: 
+  pregunta: "\xBFQu\xE9 es la compostera y c\xF3mo se utiliza en el proceso de reciclaje?"
+  respuesta1: "Un contenedor para almacenar pl\xE1sticos"
+  respuesta2: "Un sistema para descomponer residuos org\xE1nicos"
+  respuesta3: "Una m\xE1quina para compactar papel"
+  respuesta4: Un recipiente para recolectar vidrio
+  respuestaCorrecta: 2
