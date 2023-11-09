@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         fontFamily:'Roboto',
         fontSize:20,
     },
-    datos:{
+    datos_jugador:{
         width: 352,
         height: 214,
         paddingVertical:40,
@@ -22,9 +22,7 @@ const styles = StyleSheet.create({
         alignSelf:'center'
     
     },
-    texto:{
-        fontFamily:'Roboto',
-        fontSize:20,
+    subtitulo:{
         alignSelf:'center',
         fontWeight:'700',
         marginTop:40,
@@ -48,7 +46,7 @@ const styles = StyleSheet.create({
         fontSize:14,
         color:'#FFFFFF',
     },
-    encabezado_container:{
+    jugador_container:{
         flexDirection:'row'
     },
     encabezados:{
@@ -70,6 +68,14 @@ const styles = StyleSheet.create({
     },
     texto_continuar:{
         color:'#FFFFFF'
-    }
+    },
+    recompensa_container:{
+        width: 340,
+        height:140,
+        borderColor:'#11B11B',
+        borderWidth:2,
+        borderRadius:16,
+        alignSelf: 'center',
+    },
 })
 export default styles;
