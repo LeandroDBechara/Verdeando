@@ -13,10 +13,15 @@ const inputs = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor:'#ECECEC'
     },
+    titulosCampos:{
+        fontSize:16,    
+        marginLeft: 20,
+        marginBottom:10
     
+    },
     inputLarge:{
         width: 360,
-        height: 65,
+        height: 54,
         paddingHorizontal:20,
         fontSize:18,
         alignSelf: 'center',
@@ -24,7 +29,7 @@ const inputs = StyleSheet.create({
     },
     inputWithIcon:{
         width: 300,
-        height: 65,
+        height: 54,
         paddingHorizontal:20,
         fontSize:18,
         borderTopLeftRadius:16,
@@ -32,7 +37,7 @@ const inputs = StyleSheet.create({
     },
     icon:{
         width: 60,
-        height: 65,
+        height: 54,
         borderTopEndRadius:16,
         borderBottomEndRadius:16,
     }
