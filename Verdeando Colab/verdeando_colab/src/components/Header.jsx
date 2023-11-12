@@ -2,11 +2,13 @@ import { View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 
-export default function Header() {
+export default function Header({navigation}) {
     return (
         <View style={styles.container} /*onPress={this.props.navigation.openDrawer}*/>
-            <TouchableOpacity style={[styles.btn,styles.menu]}>
-                <Ionicons name="menu" size={32} color="#FFFFFF" />
+            <TouchableOpacity style={[styles.btn,styles.menu]}
+                // onPress={this.props.navigation.openDrawer}            
+            >
+                <Ionicons name="menu" size={40} color="#FFFFFF" />
             </TouchableOpacity>
             <TouchableOpacity style={[styles.btn,styles.notificacion]} >
                 <Ionicons name="notifications" size={32} color="#6C6C6C" />
@@ -18,7 +20,9 @@ export default function Header() {
 }
 const styles = StyleSheet.create({
     container:{
-        padding: 20,
+        backgroundColor: '#11B11B',
+        paddingHorizontal: 20,
+        paddingVertical: 10,
         flexDirection:'row',
         justifyContent:'space-between',
     },

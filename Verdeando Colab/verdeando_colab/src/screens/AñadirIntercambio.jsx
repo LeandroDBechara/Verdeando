@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 import Busqueda from '../components/Busqueda';
 
 
-export default function Home({navigation}) {
+export default function AñadirIntercambio({navigation}) {
   const [fontsLoaded]= useFonts({
     'Roboto': require("../../assets/fonts/Roboto.ttf"),
   });

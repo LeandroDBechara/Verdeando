@@ -2,6 +2,7 @@ import { Text, ScrollView,  View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import home from '../styles/home';
 import Header from '../components/Header';
+import Navigator from '../navigation/MenuStack'
 
 export default function Home({navigation}) {
   

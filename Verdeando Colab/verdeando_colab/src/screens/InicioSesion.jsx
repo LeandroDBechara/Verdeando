@@ -16,7 +16,7 @@ export default function InicioSesion({navigation}) {
 
     return (
         <ScrollView style={inicioSesion.container} keyboardShouldPersistTaps="handled">
-            <StatusBar backgroundColor={'#0C8414'} /> 
+            <StatusBar backgroundColor={'#11B11B'} /> 
             <Titulo />
             <Text style={[inicioSesion.texto,inicioSesion.titulo]}>Iniciar Sesión</Text>
             <View style={inicioSesion.renglon}>
