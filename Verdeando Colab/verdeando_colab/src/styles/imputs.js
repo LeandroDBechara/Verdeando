@@ -1,19 +1,41 @@
 import { StyleSheet } from "react-native";
 
-const imputs = StyleSheet.create({
+const inputs = StyleSheet.create({
     container:{
-        margin:20
+        margin:20,
     },
-    imput:{
+    row:{
+        flexDirection:'row',
+        justifyContent:'center'
+    },
+    general:{
         marginBottom:20,
+        justifyContent: 'center',
+        backgroundColor:'#ECECEC'
+    },
+    
+    inputLarge:{
         width: 360,
         height: 65,
         paddingHorizontal:20,
         fontSize:18,
         alignSelf: 'center',
-        justifyContent: 'center',
         borderRadius: 16,
-        backgroundColor:'#ECECEC'
+    },
+    inputWithIcon:{
+        width: 300,
+        height: 65,
+        paddingHorizontal:20,
+        fontSize:18,
+        borderTopLeftRadius:16,
+        borderBottomLeftRadius:16,
+    },
+    icon:{
+        width: 60,
+        height: 65,
+        borderTopEndRadius:16,
+        borderBottomEndRadius:16,
     }
+    
 })
-export default imputs;
+export default inputs;

@@ -1,6 +1,6 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, TouchableOpacity, StyleSheet, Image } from 'react-native'
 import React from 'react'
-import styles from '../styles/registrarseGF'
+//import styles from '../styles/registrarseGF'
 
 export default function RegistrarseGF() {
     return (
@@ -14,3 +14,26 @@ export default function RegistrarseGF() {
         </View> 
     )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        paddingVertical: 20,
+        flexDirection: 'row',
+        alignSelf: 'center',
+    },
+    boton:{
+        justifyContent: 'center',       
+        width:160,
+        height: 80,
+        borderWidth:2,
+        borderColor:'#E6E6E6',
+        borderRadius: 10,
+        marginHorizontal:10
+        
+    },
+    iconos:{
+        alignSelf:'center',
+        width: 40,
+        height: 40
+    }
+})

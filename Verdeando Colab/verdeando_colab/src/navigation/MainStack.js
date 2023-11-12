@@ -5,7 +5,6 @@ import InicioSesion from '../screens/InicioSesion'
 import Registrarse from '../screens/Registrarse'
 import AñadirIntercambio from '../screens/AñadirIntercambio'
 import Home from '../screens/Home'
-import CrearIntercambio from '../screens/CrearIntercambio'
 
 const Stack = createNativeStackNavigator()
 const MainStack = () => {
@@ -29,10 +28,6 @@ const MainStack = () => {
                 <Stack.Screen 
                     name='AñadirIntercambio'
                     component={AñadirIntercambio}
-                />
-                <Stack.Screen 
-                    name='CrearIntercambio'
-                    component={CrearIntercambio}
                 />
             </Stack.Navigator>
         </NavigationContainer>

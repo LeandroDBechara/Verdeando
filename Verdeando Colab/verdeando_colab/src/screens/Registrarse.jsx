@@ -1,35 +1,50 @@
-import { View, Text, TouchableOpacity, TextInput, ScrollView, useState} from 'react-native'
-import { useFonts } from 'expo-font'
-import React from 'react'
+import { View, Text, TouchableOpacity, TextInput, ScrollView} from 'react-native'
+import React, {useState} from 'react'
+import Ionicons from '@expo/vector-icons/Ionicons';
 import Titulo from '../components/Titulo'
 import Footer from '../components/Footer'
 import RegistrarseGF from '../components/RegistrarseGF'
 import Separador from '../components/Separador'
-import styles from '../styles/inicioSesion'
-import imputs from '../styles/imputs'
+import inputs from '../styles/imputs'
 import botones from '../styles/botones'
+import inicioSesion from '../styles/inicioSesion'
 
 
 export default function Registrarse({navigation}) {
-    const [fontsLoaded]= useFonts({
-        'Roboto': require("../../assets/fonts/Roboto.ttf"),
-    });
-    if(!fontsLoaded) return null;
+    const [input,setInput]=useState('');
+    const [hidePass,setHidePass]=useState(true);
+
+
     return (
-        <ScrollView style={{flex: 1}} keyboardShouldPersistTaps="handled">
+        <ScrollView style={inicioSesion.container} keyboardShouldPersistTaps="handled">
             <Titulo/>
-            <Text style={styles.txtPrincipal}>¡Bienvenido!</Text>
+            <Text style={[inicioSesion.texto,inicioSesion.titulo]}>¡Bienvenido!</Text>
             <RegistrarseGF/>
             <Separador/>
-            <View style={imputs.container}>
-                <TextInput style={imputs.imput} placeholder='Nombre:'/>
-                <TextInput style={imputs.imput} placeholder='Apellido:'/>
-                <TextInput style={imputs.imput} placeholder='Email:'/>
-                <TextInput style={imputs.imput} placeholder='Contraseña:' secureTextEntry={true} />
+            <View style={inputs.container}>
+                <TextInput style={[inputs.general,inputs.inputLarge]} placeholder='Nombre:'/>
+                <TextInput style={[inputs.general,inputs.inputLarge]} placeholder='Apellido:'/>
+                <TextInput style={[inputs.general,inputs.inputLarge]} placeholder='Email:'/>
+                <View style={inputs.row}>
+                    <TextInput 
+                        style={[inputs.general,inputs.inputWithIcon]} 
+                        placeholder='Contraseña:' 
+                        value={input} 
+                        onChangeText={(texto)=>setInput(texto)}
+                        secureTextEntry={hidePass} 
+                    />
+                    <TouchableOpacity style={[inputs.general,inputs.icon]} activeOpacity={1} onPress={()=>setHidePass(!hidePass)}> 
+                        {hidePass?
+                            <Ionicons name="eye-off" size={32} color="#D9D9D9" />
+                            :
+                            <Ionicons name="eye" size={32} color="#D9D9D9" />
+                        } 
+                    </TouchableOpacity> 
+                </View>
                 <TouchableOpacity onPress={()=>{
                     navigation.navigate("InicioSesion")
                 }}>
-                    <Text style={styles.enlace2}>Ya tengo usuario</Text>
+                    <Text style={inicioSesion.enlace2}>Ya tengo usuario</Text>
                 </TouchableOpacity>         
             </View>
             <View style={botones.container}> 

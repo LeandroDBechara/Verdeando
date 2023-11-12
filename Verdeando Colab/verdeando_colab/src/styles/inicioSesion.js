@@ -1,16 +1,20 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-    txtPrincipal:{
-        fontFamily:'Roboto',
-        marginTop:15,
+const inicioSesion = StyleSheet.create({
+    container:{
+        flex:1,
+        backgroundColor:'#FFFFFF'
+    },
+    texto:{
         textAlign:'center',
+    },
+    titulo:{
+        marginTop:15,
         fontSize: 32,
         letterSpacing: 1.28,
         fontWeight: 'bold'
     },
     txtSecundario: {
-        fontFamily:'Roboto', 
         fontSize: 16,
         fontWeight: 'bold'
     },
@@ -20,18 +24,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     renglon:{
-        //backgroundColor: 'yellow',
         marginTop:25,
         flexDirection: 'row',
         alignSelf: 'center',
     },
     enlace2:{
-        fontFamily:'Roboto', 
-        alignSelf:'center',
         color:'black',
         textDecorationLine: 'underline',
-
     }
 })
 
-export default styles;
+export default inicioSesion;

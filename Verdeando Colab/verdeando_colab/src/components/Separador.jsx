@@ -5,7 +5,7 @@ export default function Separador() {
     return (
         <View style={styles.container}>
             <View style={styles.linea}></View>
-            <Text style={styles.texto}>o</Text>
+                <Text style={styles.texto}>O</Text>
             <View style={styles.linea}></View>
         </View>
     )
