@@ -40,6 +40,15 @@ const inputs = StyleSheet.create({
         height: 54,
         borderTopEndRadius:16,
         borderBottomEndRadius:16,
+    },
+    checkbox:{
+        borderColor:'#11B11B'
+    },
+    termCond:{
+        flexDirection:'row', 
+        marginLeft:20, 
+        marginTop:10,
+        alignContent:'space-around'
     }
     
 })

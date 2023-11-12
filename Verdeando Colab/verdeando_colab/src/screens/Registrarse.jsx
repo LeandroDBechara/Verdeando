@@ -9,12 +9,41 @@ import Separador from '../components/Separador'
 import inputs from '../styles/imputs'
 import botones from '../styles/botones'
 import inicioSesion from '../styles/inicioSesion'
+import CheckBox from 'expo-checkbox'
 
 
 export default function Registrarse({navigation}) {
     const [input,setInput]=useState('');
     const [hidePass,setHidePass]=useState(true);
 
+    const [fecNac, setfecNac]=useState('');
+    const [date,setDate]=useState(new Date());
+    const [showPicker,setShowPicker]=useState(false);
+    const toggleDatePicker=()=>{
+        setShowPicker(!showPicker);
+    };
+    const onChange =({type}, selectedDate)=>{
+        if(type=='set'){
+            const currentDate=selectedDate;
+            setDate(currentDate);
+            if (Platform.OS==='android'){
+                toggleDatePicker();
+                setfecNac(formatDate(currentDate));
+            }
+        }else{
+            toggleDatePicker();
+        }
+    };
+    const formatDate=(rawDate)=>{
+        let date =new Date(rawDate);
+        let year =date.getFullYear();
+        let month =date.getMonth()+1;
+        let day = date.getDate();
+
+        return `${day}/${month}/${year}`;
+    };
+
+    const [isChecked,setChecked]=useState(false);
     return (
         <ScrollView style={inicioSesion.container} keyboardShouldPersistTaps="handled">
             <Titulo/>
@@ -29,7 +58,29 @@ export default function Registrarse({navigation}) {
                 <Text style={inputs.titulosCampos}>Email</Text>
                 <TextInput style={[inputs.general,inputs.inputLarge]} placeholder='example@gmail.com'/>
                 <Text style={inputs.titulosCampos}>Fecha de nacimiento: </Text>
-                <TextInput style={[inputs.general,inputs.inputLarge]} placeholder='01/01/1999' editable={false} />     
+                {
+                    showPicker ? (
+                        <DateTimePicker
+                            value={date}
+                            mode='date'
+                            display='spinner'
+                            onChange={onChange}
+                        />
+                    )
+                    :
+                    (
+                        <Pressable
+                            onPress={toggleDatePicker}
+                        >
+                            <TextInput style={[inputs.general,inputs.inputLarge, { pointerEvents: 'none' }]} 
+                                placeholder='dd/mm/aaaa' 
+                                value={fecNac}
+                                onChangeText={setfecNac}
+                                editable={false}
+                            /> 
+                        </Pressable>
+                    )
+                }
                 <Text style={inputs.titulosCampos}>Contraseña:</Text>
                 <View style={inputs.row}>
                     <TextInput 
@@ -48,17 +99,25 @@ export default function Registrarse({navigation}) {
                     </TouchableOpacity> 
                     
                 </View>
+                <View style={inputs.termCond}>
+                    <CheckBox style={inputs.checkbox} color={isChecked? '#11B11B':undefined} value={isChecked} onValueChange={setChecked}/>
+                    <Text style={inicioSesion.txtSecundario}> Acepto los </Text>
+                    <TouchableOpacity onPress={()=>{}}> 
+                        <Text style={[inicioSesion.txtSecundario, inicioSesion.enlace2]}>Términos y condiciones</Text>
+                    </TouchableOpacity>     
+                </View>
                 
-                <TouchableOpacity onPress={()=>{
-                    navigation.navigate("InicioSesion")
-                }}>
-                    <Text style={inicioSesion.enlace2}>Ya tengo usuario</Text>
-                </TouchableOpacity>         
-            </View>
+                
             <View style={botones.container}> 
-                <TouchableOpacity style={botones.boton} onPress={()=>{}}> 
+                <TouchableOpacity  style={[botones.general,botones.btnLarge]}onPress={()=>{}}> 
                     <Text style={botones.texto}>Registrarse</Text>
                 </TouchableOpacity>
+            </View>
+            <TouchableOpacity onPress={()=>{
+                    navigation.navigate("InicioSesion")
+                }}>
+                    <Text style={[inicioSesion.texto,inicioSesion.enlace2]}>Ya tengo usuario</Text>
+                </TouchableOpacity>         
             </View>
             <Footer/>
         </ScrollView>
