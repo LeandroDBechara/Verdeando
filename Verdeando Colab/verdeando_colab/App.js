@@ -1,8 +1,13 @@
-import React from 'react'
-import MainStack from './src/navigation/MainStack';
+import 'react-native-gesture-handler';
+
+import Login from "./src/screens/Login";
+import AuthStack from './src/navigation/AuthStack';
+
 
 export default function App() {
   return (
-    <MainStack />
-  )
+    <AuthStack/>
+  );
 }
+
+

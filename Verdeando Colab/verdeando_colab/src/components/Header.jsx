@@ -1,19 +1,15 @@
 import { View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
-import { NavigationContainer} from '@react-navigation/native'
-import { DrawerNavigation } from '../navigation/MenuStack'
-import { useState } from 'react'
 
 
-export default function Header({navigation}) {
-    // const [isDraweeOpen,setIsDrawerOpen]= useState(false);
-    // const toggleDrawer =()=>{
-    //     setIsDrawerOpen(!isDraweeOpen);
-    // };
+export default function Header() {
+
     return (
-        <View style={styles.container} /*onPress={this.props.navigation.openDrawer}*/>
-            <TouchableOpacity style={[styles.btn,styles.menu]}          
+        <View style={styles.container} >
+            <TouchableOpacity 
+                style={[styles.btn,styles.menu] } 
+                onPress={()=>navigation.openDrawer()}
             >
                 <Ionicons name="menu" size={40} color="#FFFFFF" />
             </TouchableOpacity>
